@@ -1,0 +1,3 @@
+window.__text_connect={addons:textConnect.addons,visitor:textConnect.visitor,getCartContent:function(success){if(!this.addons?.includes('woocommerce')){return!1}
+let xhr;try{xhr=new XMLHttpRequest()}catch(e){return!1}
+xhr.open('POST',textConnect.ajax_url,!0);xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded; charset=UTF-8');xhr.onreadystatechange=function(){if(xhr.readyState>3&&xhr.status===200&&success){success(xhr.responseText)}};xhr.send('action=text-refresh-cart');return xhr}}
