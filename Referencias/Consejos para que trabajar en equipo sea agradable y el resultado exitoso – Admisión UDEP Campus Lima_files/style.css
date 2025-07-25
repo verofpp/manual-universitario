@@ -1,0 +1,494 @@
+/*
+Theme Name: UDEP CUSTOM TEMPLATE - ADMISIÓN
+Theme URI: http://google.com;
+Author: dev 
+Author URI: http://google.com;
+Description: Plantilla personalizada para Admisión UDEP
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: udep
+*/
+
+/* PAGINADOR */
+.wp-pagenavi {
+    margin-top: 1em;
+    margin-bottom: 1em;;
+}
+.wp-pagenavi a,
+.wp-pagenavi span {
+	padding: 8px 10px 6px;
+	color: #999;
+	display: inline-block;
+}
+.wp-pagenavi a:hover,
+.wp-pagenavi span.current {
+	border-color: #28a7de;
+	color: #28a7de;
+}
+.wp-pagenavi span.current {
+	color: #28a7de;
+}
+
+ul#menu-resultados{
+	text-align: center;
+	padding: 0;
+}
+ul#menu-resultados li {
+	display: inline-block;
+	margin: 0 5px;
+}
+ul#menu-resultados li a {
+	font-family: 'AvenirLTStd-Black';
+	background-color: #b3b3b3;
+	color: #fff;
+	padding: 0.7em 1em;
+	display: inline-block;
+	width: 280px;
+
+	position: relative;
+}
+ul#menu-resultados li a:after{
+	content: "";
+	position: absolute;
+	right: 100%;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	/*margin-top: -1.2em;*/
+
+	border-right: 140px solid transparent;
+	border-left: 140px solid transparent;
+	border-top: 15px solid #b3b3b3;
+}
+ul#menu-resultados li a.active,
+ul#menu-resultados li a:hover,
+ul#menu-resultados li.current_page_item a{
+	background-color: #93268f;
+}
+ul#menu-resultados li a.active:after,
+ul#menu-resultados li a:hover:after,
+ul#menu-resultados li.current_page_item a:after{
+	border-top: 15px solid #93268f;
+}
+/*@media(max-width: 1199px){
+	ul#menu-resultados li a {
+		font-size: 0.93em;
+		width: 240px;
+	}
+	ul#menu-resultados li a:after {
+		border-right: 120px solid transparent;
+		border-left: 120px solid transparent;
+	}
+}*/
+@media(max-width: 991px){
+	ul#menu-resultados li a {
+		width: 220px;
+		padding: 0.7em 0.5em;
+		font-size: 13.5px;
+	}
+	ul#menu-resultados li a:after {
+		border-right: 110px solid transparent;
+		border-left: 110px solid transparent;
+	}
+}
+@media(max-width: 767px){
+	ul#menu-resultados li a {
+		width: 180px;
+		font-size: 14px;
+	}
+	ul#menu-resultados li a:after {
+		border-right: 90px solid transparent;
+		border-left: 90px solid transparent;
+	}
+	
+}
+@media(max-width: 640px){
+	ul#menu-resultados li a {
+		width: 120px;
+		font-size: 12px;
+	}
+	ul#menu-resultados li a:after {
+		border-right: 60px solid transparent;
+		border-left: 60px solid transparent;
+	}
+}
+@media(max-width: 480px){
+	ul#menu-resultados li a {
+		font-size: 12px;
+		width: 90px;
+		padding: 0.5em;
+	}
+	ul#menu-resultados li a:after {
+		border-right: 45px solid transparent;
+		border-left: 45px solid transparent;
+	}
+}
+
+
+
+.mostrar{
+	  display: block;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+}
+
+.mostrar .enlace:hover {
+    text-decoration: underline;
+}
+
+#pag-resultados .nombre{
+	font-family: 'AvenirLTStd-Black';
+	font-size: 1.7em;
+	color: #29AAE1;
+	margin-top: 0;
+	margin-bottom: 5px;
+}
+#pag-resultados .carrera{
+	text-align: left;
+	font-size: 1.2em;
+	color: #0060AD;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin-bottom: 0;
+}
+/*@media(max-width: 1199px){
+	#pag-resultados .nombre{
+		font-size: 1.4em;
+	}
+	#pag-resultados .carrera{
+		font-size: 1.1em;
+	}
+}*/
+.txt-res-fecha{
+	font-size: 1.4em;
+}
+
+
+#contenido-resultados {
+    border: none;
+    max-width: 850;
+    margin: 0 auto;
+}
+
+#contenido-resultados {
+	border: 1px dashed #93268f;
+	padding: 4em 0em 3em;
+	margin-top: -2em;
+}
+#contenido-resultados form{
+	display: table;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+@media(min-width: 768px){
+   #contenido-resultados form{
+	width: 70%;
+   }
+}	
+#contenido-resultados table{
+	width: 100%
+}
+#contenido-resultados table td,
+#contenido-resultados table th{
+	text-align: center;
+	vertical-align: middle;
+}
+#contenido-resultados table th{
+	background: #F2F2F2;
+}
+.th-resultado{
+	height: 80px;
+	vertical-align: middle !important;
+}
+
+#tabla-res-uno{
+	max-width: 330px;
+	margin-right: 0;
+	margin-left: auto;
+}
+#tabla-res-dos > tbody > tr > td{
+	width: 50%;
+}
+@media(max-width: 1199px){
+	#contenido-resultados {
+		border: 1px dashed #93268f;
+		padding: 4em 0em 3em;
+		margin-top: -2em;
+	}
+}
+@media(max-width: 767px){
+	#tabla-res-uno{
+		max-width: 100%;
+		margin-right: 0;
+		margin-left: 0;
+	}
+	/*#tabla-res-dos{
+		display: block;
+	}*/
+	#tabla-res-dos > tbody > tr > td{
+		width: 100%;
+		display: block;
+	}
+	#tabla-res-dos > tbody > tr > td:first-child > table{
+		margin-bottom: 0;
+	}
+}
+
+
+
+
+.btn-volver-resultados,
+.btn-volver-resultados:focus{
+	background-color: #28a7de;
+	color: #fff;
+	font-family: 'AvenirLTStd-Black';
+	padding: 0.5em 1em;
+	display: table;
+
+	position: relative;
+}
+.btn-volver-resultados:before{
+	content: "";
+	position: absolute;
+	top: 50%;
+	right: 100%;
+	
+	margin-top: -1.2em;
+	border-top: 1.2em solid transparent;
+	border-bottom: 1.2em solid transparent;
+	border-right: 15px solid #28a7de;
+}
+.btn-volver-resultados:hover{
+	color: #fff;
+}
+
+
+
+
+
+.btn-consultar-resultado,
+.btn-consultar-resultado:focus{	
+	display: table;
+	position: relative;
+	margin: 0 auto;
+}
+.btn-consultar-resultado input{
+	background-color: #28a7de;
+	color: #fff;
+	font-family: 'AvenirLTStd-Black';
+	padding: 0.5em 1em;
+	border: 0;
+}
+.btn-consultar-resultado input,.btn-consultar-resultado a{
+	background-color: #28a7de;
+	color: #fff;
+	font-family: 'AvenirLTStd-Black';
+	padding: 0.5em 1em;
+	border: 0;
+	cursor:pointer;
+}
+.btn-consultar-resultado:after{
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 100%;
+	
+	margin-left: -1px;
+	margin-top: -1.2em;
+	border-top: 1.2em solid transparent;
+	border-bottom: 1.2em solid transparent;
+	border-left: 15px solid #28a7de;
+}
+.btn-consultar-resultado input:hover{
+	color: #fff;
+}
+
+
+/*PÁGINA CARRERAS*/
+
+
+  .cajaTexto{
+         padding: 1.5rem;
+         color:#fff;
+         }
+         .cajaTexto__numero{
+         font-size: 3rem;
+         }
+         .cajaTexto__texto{
+         font-size: 1rem;
+         }
+         .textoJustificado{
+         margin-bottom: 1rem;
+         }
+         .textoJustificado__titulo{
+         color:#54d0ff;
+         font-size:1.2rem;
+         margin-bottom: 0.5rem;
+         font-size: 0.9rem;
+         font-family: var(--fuenteBold);
+         }
+         .textoJustificado__texto{
+         color:#grey;	
+         font-size:0.8rem;
+         font-family: var(--fuenteBold);
+         }
+
+         .tituloSeccion{
+           text-align: center;
+         }
+
+         .tituloSeccion--w40{
+           width:40%;
+         }
+
+         .tituloSeccion__texto{
+            font-size: 2.5rem;
+            font-weight: bolder;
+            position: relative;
+            width: auto;
+         }
+
+         .tituloSeccion__texto{
+             /* bottom: -12px; */
+	         /* position: absolute; */
+	         /*width: max-content;*/
+	         /* background-color: #34A0F0; */
+	         /* height: 5px; */
+	         display: inline-block;
+	         text-align: center;
+         }
+
+
+         .videoContenidoCarrera{         	
+		    justify-content: center;
+		    display: flex;
+		    align-items: center;
+		    flex-flow: column;
+		    text-align: center;
+		    padding: 5rem 0;
+		    color:#fff;
+         }
+
+
+         .cajaFondoTexto{
+         	/*background: url(https://www.udep.edu.pe/admision/lima/wp-content/uploads/2022/04/video.jpg);*/
+	        background-position: center;
+	        background-size: cover;
+	        display: flex;
+	        justify-content: end;
+	        flex-flow: column;
+	        color: #fff;
+	        padding: 2rem;
+	        height:400px;
+         }
+
+         .cajaFondoTexto__titulo{
+          font-family:var(--fuenteBold);
+         }
+         .cajaFondoTexto__texto{
+          font-family:var(--fuenteRegular);
+         }
+
+         .lineaCeleste{
+         	 border-bottom: 5px solid #34A0F0;
+             width: 60%;
+             left: 0;
+             display: block;
+             margin: 0 auto;
+             margin-top: 0.7rem;
+         }
+
+         .lineaCeleste--left{
+         	margin-left: inherit !important;
+         }
+
+         .fotoTexto__titulo{
+
+         }
+
+
+        /*****SECCION LOGIN*****/
+         .cajaLogin__texto1{
+         	color: #000;
+         }
+         
+         .cajaLogin__texto1, .cajaLogin__texto2{
+         	font-family: var(--fuenteTitulo);
+         }
+         
+         .cajaLogin__texto2{
+         	font-size: 3.2rem;
+            line-height: 1rem;
+            color: #00abe2;
+         }
+
+         .cajaLogin__texto3{
+         	font-size: 4.2rem;
+            color: #000;
+         }
+
+
+	.MundoUdep__Animacion .margin-seccion {
+    margin-bottom: 0;
+}
+
+
+#contenido-resultados {
+    border: none;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+@media (max-width: 1199px){
+	#contenido-resultados{
+		padding: 4em 0em 3em;
+	}
+	
+}
+
+
+
+
+
+  /*****FLECHA ICON*****/
+  @media (max-width: 991px) {
+	.flecha-icon-1{
+	  transform: rotate(90deg);
+	  display: inline-block;
+	  padding: 1rem 0rem;
+	  width: 60px;
+	}
+  }
+  @media (max-width: 1199px) {
+	.flecha-icon{
+	  transform: rotate(90deg);
+	  display: inline-block;
+	  padding: 1rem 0rem;
+	  width: 60px;
+	}
+  }
+
+
+.flecha-icon-abajo{
+	  transform: rotate(90deg);
+	  display: inline-block;
+	  padding: 1rem 0rem;
+	  width: 60px;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

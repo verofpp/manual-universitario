@@ -1,0 +1,283 @@
+/* -------------------------------------------------- */
+/* BACKGROUND IMG + CONTENIDO SOBRE + ALINEACION */
+/* -------------------------------------------------- */
+
+
+#bg-img{
+  background-color: #000;
+
+  position: relative;
+  overflow: hidden;
+}
+#bg-img *{
+  color: #fff;
+}
+
+.bg-img__bg > img{
+  width: 100%;
+  height: auto;
+}
+
+#bg-img .container{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+
+  margin: 0 auto;
+  height: 100%;
+}
+
+.bg-img__over{
+  position: absolute;
+  top: auto;
+  bottom: auto;
+}
+
+.bg-img__over.left{
+  left: 0;
+  padding-left: 15px;
+  text-align: left;
+}
+.bg-img__over.center{
+  left: 0;
+  right: 0;
+  padding: 0 15px;
+  margin: 0 auto;
+  text-align: center;
+}
+.bg-img__over.right{
+  right: 0;
+  padding-right: 15px;
+  text-align: right;
+}
+.bg-img__over.left,
+.bg-img__over.right{
+  width: 50%;
+}
+
+.bg-img__over.top{
+  top: 3.5em;
+}
+.bg-img__over.middle{
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+     -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+       -o-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.bg-img__over.bottom{
+  bottom: 3.5em;
+}
+
+.bg-img__over *:first-child{
+  margin-top: 0;
+}
+.bg-img__over *:last-child{
+  margin-bottom: 0;
+}
+
+.bg-img__over ul{
+  display: inline-block;
+  text-align: left;
+}
+
+.bg-img__over h1,
+.bg-img__over h2,
+.bg-img__over h3,
+.bg-img__over h4,
+.bg-img__over h5,
+.bg-img__over h6{
+  margin-bottom: 10px;
+}
+
+/* MEDIA QUERIS */
+@media (min-width: 481px){
+  .bg-img__over.center{
+    width: 75%;
+  }
+  .bg-img__over.left,
+  .bg-img__over.right{
+    width: 65%;
+  }
+}
+
+@media (min-width: 992px){
+
+  .bg-img__over.left,
+  .bg-img__over.right{
+    width: 60%;
+  }
+}
+/* -------------------------------------------------- */
+
+
+
+
+
+/* -------------------------------------------------- */
+/* OWL GENERAL */
+/* -------------------------------------------------- */
+.owl-general{
+  background-color: #ccc;
+  width: 100%;
+}
+.owl-general .owl-dots{
+  text-align: center;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 10px;
+}
+.owl-general .owl-dots .owl-dot {
+  display: inline-block;
+  zoom: 1;
+}
+.owl-general .owl-dots .owl-dot span {
+  width: 20px;
+  height: 20px;
+  margin: 5px;
+  background-color: rgba(255,255,255,.5);
+  display: block;
+  -webkit-backface-visibility: visible;
+  transition: opacity .2s ease;
+  border-radius: 30px;
+}
+.owl-general .owl-dots .owl-dot.active span, 
+.owl-general .owl-dots .owl-dot:hover span {
+  background-color: rgba(255,255,255,1);
+}
+
+.owl-general .owl-nav{
+  font-size: 0;
+}
+.owl-general .owl-nav > div{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-color: rgba(255,255,255,.5);
+  background-size: 100%;
+  
+  position: absolute;
+  z-index: 999;
+  top: 50%;
+  margin-top: -25px;
+}
+.owl-general .owl-nav > div:hover{
+  background-color: rgba(255,255,255,1);
+}
+.owl-general .owl-nav .owl-prev{
+  background-image: url(../img/web/flecha_owl_ant.png);
+  background-position: 0% center;
+  left: 2%;
+}
+.owl-general .owl-nav .owl-next{
+  background-image: url(../img/web/flecha_owl_sig.png);
+  background-position: 100% center;
+  right: 2%;
+}
+
+@media (max-width: 480px) {
+  .owl-general .owl-dots{
+    bottom: 5px;
+  }
+  /*.owl-general .owl-dots{
+    display: none;
+  }*/
+  .owl-general .owl-nav > div{
+    width: 36px;
+    height: 36px;
+    margin-top: -18px;
+  }
+}
+/* -------------------------------------------------- */
+
+
+
+
+/* -------------------------------------------------- */
+/* CONVENIOS*/
+/* -------------------------------------------------- */
+@media (max-width: 360px) {
+  .titulo-convenios{
+    line-height: 31px !important;
+    font-size: 2.5em !important;
+   }
+}
+
+
+
+@media (max-width: 480px) {
+  .titulo-convenios{
+    line-height: 28px !important;
+    font-size: 2.6em !important;
+   }
+}
+
+
+@media (max-width: 632px) {
+  .titulo-convenios{
+    line-height: 39px !important;
+    font-size: 3.5em !important;
+
+   }
+}
+
+@media (max-width: 992px) {
+  .titulo-convenios{
+    line-height: 31px !important;
+    font-size: 2.6em!important;
+  }
+
+  .titulo-udep{
+    font-size: 1.1em; line-height: 1em;
+  }
+
+  .titulo-mundo{
+    margin-bottom: 10px; font-size: 0.9em;
+  }
+
+
+}
+
+.titulo-udep{
+  font-size: 1.5em; line-height: 1em;
+}
+
+.titulo-mundo{
+  margin-bottom: 10px; font-size: 1.07em;
+}
+
+
+.titulo-convenios{
+  line-height: 51px; font-size: 3.75em; margin-top: 0; margin-bottom: 8px;
+}
+
+
+
+.boton_blanco {
+    color: #fff!important;
+    border: 1px solid #fff!important;
+}
+
+.boton_blanco:hover {
+    background-color: #fff!important;
+    color: #000!important;
+}
+
+.boton {
+    padding: .5rem 1rem;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid #00b2ef;
+    color: #00b2ef;
+	
+}
+/* -------------------------------------------------- */

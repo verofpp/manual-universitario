@@ -1,0 +1,187 @@
+/* -------------------------------------------------- */
+/* SECCION CON BG SESGADO */
+/* -------------------------------------------------- */
+.sec-sesgado{
+  position: relative;
+  padding-top: 4%;
+  padding-bottom: 4%;
+}
+.sec-sesgado .sec-sesgado__bg{
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.sec-sesgado .container .row *{
+  color: inherit;
+}
+.sec-sesgado .container .row *:first-child{
+  margin-top: 0;
+}
+.sec-sesgado .container .row *:last-child{
+  margin-bottom: 0;
+}
+
+.sec-sesgado--true{
+  z-index: 1;
+  padding-top: 5em;
+  padding-bottom: 5em;
+  margin-top: -4%;
+  margin-bottom: 5em;
+}
+
+/*DERECHO*/
+
+.derecho.sec-sesgado:first-child{
+    margin-bottom: 0 !important;
+}
+
+.sec-sesgado--true .sec-sesgado__bg{
+  -webkit-transform: skewY(-4.45deg);
+     -moz-transform: skewY(-4.45deg);
+      -ms-transform: skewY(-4.45deg);
+       -o-transform: skewY(-4.45deg);
+          transform: skewY(-4.45deg);
+}
+/* -------------------------------------------------- */
+
+
+
+
+
+/* -------------------------------------------------- */
+/* CUADRO CON IMG DE BG + CONTENIDO SOBRE */
+/* -------------------------------------------------- */
+.row-bg-img-cdro > div{
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.bg-img-cdro-contenedor {
+  padding: 2% 4%;
+}
+
+#bg-img-cdro{
+  position: relative;
+  overflow: hidden;
+}
+#bg-img-cdro *{
+  color: #fff;
+}
+
+.bg-img-cdro__img{
+  width: 100%;
+  height: auto;
+}
+.bg-img-cdro__velo,
+.bg-img-cdro__velo:before{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+.bg-img-cdro__velo:before{
+  content: "";
+}
+.bg-img-cdro__over{
+  position: absolute;
+  top: 12%;
+  bottom: 12%;
+  left: 12%;
+  right: 12%;
+  z-index: 2;
+}
+
+.bg-img-cdro__table{
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+.bg-img-cdro__cel{
+  display: table-cell;
+  vertical-align: middle;
+}
+.bg-img-cdro__h,
+.bg-img-cdro__p{
+  display: table;
+  margin: 0 auto;
+}
+.bg-img-cdro__h{
+  font-family: 'AvenirLTStd-Black';
+  font-size: 1.5em;
+  line-height: 1;
+}
+.bg-img-cdro__p{
+  line-height: 1.2;
+}
+
+/* ESTADOS */
+.bg-img-cdro__velo:before,
+.bg-img-cdro__h,
+.bg-img-cdro__p{
+  -webkit-transition: all .3s ease-out;
+     -moz-transition: all .3s ease-out;
+      -ms-transition: all .3s ease-out;
+       -o-transition: all .3s ease-out;
+          transition: all .3s ease-out;
+}
+
+.bg-img-cdro__velo{
+  opacity: .6;
+}
+.bg-img-cdro__velo:before{
+  background-color: #000;
+}
+#bg-img-cdro:hover .bg-img-cdro__velo:before{
+  background-color: inherit;
+}
+
+#bg-img-cdro .bg-img-cdro__h,
+#bg-img-cdro:hover .bg-img-cdro__p{
+  opacity: 1;
+}
+#bg-img-cdro:hover .bg-img-cdro__h,
+.bg-img-cdro__p{
+  opacity: 0;
+}
+
+/* MEDIA QUERIS */
+@media (min-width: 481px){
+  .bg-img-cdro-contenedor {
+    padding: 4%;
+  }
+
+  .bg-img-cdro__h{
+    font-size: 1.25em;
+  }
+}
+@media (min-width: 768px){
+  .bg-img-cdro__h{
+    font-size: 1.5em;
+  }
+}
+@media (min-width: 992px){
+  .bg-img-cdro__h{
+    font-size: 1.125em;
+  }
+}
+@media (min-width: 1200px){
+  .bg-img-cdro__h{
+    font-size: 1.25em;
+  }
+}
+
+
+
+
+
+/* -------------------------------------------------- */
+
+
